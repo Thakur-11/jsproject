@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: column;
+            flex-direction: column;
+        }
+        #box{
+            text-color: white;
+            width: 300px;
+            height: 180px;
+            background-color: skyblue;
+            border-radius: 20px;
+            text-align: center;
+            padding: 30px;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+    <input type="text" id="inp">
+    <h1 style="colour: white;">Your Timer</h1>
+    <h1 id="h">Enter Seconds</h1>
+    <button id="button" onclick="run()">Start</button>
+    </div>
+    <script>
+        function run(){
+             let x=document.getElementById("inp").value 
+            document.getElementById("h").innerHTML="Timer starts now"
+            function Count(){
+                if(x>0){
+                    document.getElementById("h").innerHTML=x
+                let ele=document.getElementById("h")
+                h1Ele.style.backgroundColor="lightblue"
+                h1Ele.style.width="60px"
+                h1Ele.style.height="60px"
+                h1Ele.style.borderRadius="70%"
+                h1Ele.style.textAlign="center"
+                h1Ele.style.marginLeft="120px"
+                h1Ele.style.color="white"
+                num--
+                x--}
+                else{
+                    clearInterval(interval)
+                    document.getElementById("h").innerHTML="Time Over!"
+                    let h1Ele=document.getElementById("h")
+                    h1Ele.style.background=""
+                    h1Ele.style.width=""
+                    h1Ele.style.textAlign=""
+                    h1Ele.style.color=""
+                    h1Ele.style.height=""
+                    h1Ele.style.marginleft=""
+                } 
+            }
+            document.getElementById("inp").value=""
+            let Interval=setInterval(abc,1000)           
+        }
+    </script>
+</body>
+</html>
